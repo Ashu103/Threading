@@ -1,0 +1,7 @@
+from threading import *
+import time
+def message():
+    time.sleep(5)
+    print("let me sleep for 5 secs")
+t=Thread(target=message)
+t.start()

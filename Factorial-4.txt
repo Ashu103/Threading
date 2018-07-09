@@ -1,0 +1,12 @@
+from threading import *
+def factorial(num):
+    if num == 1:
+         return 1
+    else:
+         return (num * factorial(num-1))
+
+
+num = int(input("Enter Number to be factorial:"))
+print('Factorial of {} is {}'.format(num, factorial(num)))
+t=Thread(target=factorial,args=(num,))
+t.start()
